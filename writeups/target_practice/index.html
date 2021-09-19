@@ -1,1 +1,9 @@
-here is some text. 
+For this challenge, we were given a .gif that had a bullseye with some dots around it. This is reminiscent of the more familiar square QR codes, so a good first step would be to google search "QR code with circle in center."
+
+So with this google search: https://www.google.com/search?client=firefox-b-1-d&q=qr+code+with+bullseye+in+center we were able to see that the gif probably deals with maxicode. The next google search might be "online maxicode reader," which leads us to this site: https://products.aspose.app/barcode/recognize/maxicode
+
+Before we throw the files into the online reader, since it's a .gif we need to break it down into separate images. For this, we can download an app called "graphicsmagick" with the following command: apt install graphicsmagick-imagemagick-compat 
+
+Now, if we run the command "gm convert target_practice.gif +adjoin broken%d.png" we can see that the gif got converted into individual images for each of the frames. 
+
+Looking at each of the images and comparing the density of the dots, there is one that sticks out which is the 17th one. If we throw that into the online reader, we can see that the reader converts the QR code into our flag. 
